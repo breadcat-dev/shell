@@ -2,7 +2,6 @@ package cat.breadcat.shell;
 
 import cat.breadcat.breech.BinaryInput;
 import cat.breadcat.breech.BinaryOutput;
-import com.sun.nio.sctp.IllegalReceiveException;
 
 import java.io.IOException;
 import java.util.HashMap;
