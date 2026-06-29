@@ -31,12 +31,14 @@ public final class SerializerRegistry
     }
 
 
-    public <T> void register(Class<T> type, BinarySerializer<T> serializer)
+    public <T> SerializerRegistry register(Class<T> type, BinarySerializer<T> serializer)
     {
         if(isRegistered(type))
             throw new SerializerAlreadyRegisteredException(type);
 
         registry.put(type, serializer);
+
+        return this;
     }
 
     @SuppressWarnings("unchecked")
