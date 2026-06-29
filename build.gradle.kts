@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "cat.breadcat"
-version = "1.0.0"
+version = "1.1.0"
 
 repositories {
     mavenCentral()
@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation("cat.breadcat:breech:1.0.4")
+    implementation("cat.breadcat:breech:1.2.1")
 }
 
 publishing {
