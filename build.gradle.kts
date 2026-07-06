@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation("cat.breadcat:breech:1.2.1")
+    implementation("cat.breadcat:breech:2.0.0")
 }
 
 publishing {

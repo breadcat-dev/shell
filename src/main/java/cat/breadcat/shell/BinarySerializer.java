@@ -1,12 +1,12 @@
 package cat.breadcat.shell;
 
-import cat.breadcat.breech.bytes.ByteInputStream;
-import cat.breadcat.breech.bytes.ByteOutputStream;
+import cat.breadcat.breech.bytes.BinaryReader;
+import cat.breadcat.breech.bytes.BinaryWriter;
 
 import java.io.IOException;
 
 public interface BinarySerializer<T>
 {
-    void write(ByteOutputStream out, T value) throws IOException;
-    T read(ByteInputStream in) throws IOException;
+    void write(BinaryWriter out, T value) throws IOException;
+    T read(BinaryReader in) throws IOException;
 }

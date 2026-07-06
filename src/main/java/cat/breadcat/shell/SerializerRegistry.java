@@ -1,7 +1,7 @@
 package cat.breadcat.shell;
 
-import cat.breadcat.breech.bytes.ByteInputStream;
-import cat.breadcat.breech.bytes.ByteOutputStream;
+import cat.breadcat.breech.bytes.BinaryReader;
+import cat.breadcat.breech.bytes.BinaryWriter;
 import cat.breadcat.exception.SerializationFailureException;
 import cat.breadcat.exception.SerializerAlreadyRegisteredException;
 import cat.breadcat.exception.NoSerializerForTypeException;
@@ -42,7 +42,7 @@ public final class SerializerRegistry
     }
 
     @SuppressWarnings("unchecked")
-    public <T> void serialize(ByteOutputStream out, T data)
+    public <T> void serialize(BinaryWriter out, T data)
     {
         if(data == null)
             throw new NullPointerException("data");
@@ -60,7 +60,7 @@ public final class SerializerRegistry
         }
     }
 
-    public <T> T deserialize(ByteInputStream in, Class<T> type)
+    public <T> T deserialize(BinaryReader in, Class<T> type)
     {
         BinarySerializer<T> serializer = serializer(type);
 
