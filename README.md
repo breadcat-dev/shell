@@ -98,7 +98,7 @@ Can also chain register methods:
 registry
     .register(X.class, new XSerializer())
     .register(Y.class, new YSerializer())
-     .register(Z.class, new ZSerializer());
+    .register(Z.class, new ZSerializer());
 */
 ```
 
